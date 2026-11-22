@@ -13,9 +13,9 @@
 #' negative words and counts how many are found.
 #'
 #' 3. text_mood_analysis() uses the two functions above to count the
-#' positive and negative words and tells you the mood of the text.
+#' positive and negative words and tells you their ratio in the text.
 #'
-#'#' @section Example data:
+#'@section Example data:
 #' The package includes an example diary text. To try the package, run:
 #' \code{text_mood_analysis(system.file("extdata", "Example_negative.txt",
 #' package = "textanalysis"))}
