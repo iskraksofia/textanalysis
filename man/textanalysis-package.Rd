@@ -17,13 +17,23 @@ lowercase and splits the text into separate words.
 \item compare_words() compares these words to a list of positive or
 negative words and counts how many are found.
 \item text_mood_analysis() uses the two functions above to count the
-positive and negative words and tells you the mood of the text.
+positive and negative words and tells you their ratio in the text.
 }
+}
+\section{Example data}{
 
-#' @section Example data:
 The package includes an example diary text. To try the package, run:
 \code{text_mood_analysis(system.file("extdata", "Example_negative.txt",
 package = "textanalysis"))}
+}
+
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/iskraksofia/textanalysis}
+  \item Report bugs at \url{https://github.com/iskraksofia/textanalysis/issues}
+}
+
 }
 \author{
 Sofiia Iskrak
