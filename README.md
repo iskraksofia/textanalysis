@@ -7,7 +7,7 @@ negative words used in the text.
 ## Install
 
 ```r
-devtools::install_github("YOUR-USERNAME/textanalysis")
+devtools::install_github("iskraksofia/textanalysis")
 ```
 
 ## Try it
