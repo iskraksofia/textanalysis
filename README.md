@@ -1,25 +1,43 @@
 
 # textanalysis
 
-<!-- badges: start -->
-<!-- badges: end -->
+Analyses the mood of a text based on pre-identified positive and
+negative words used in the text.
 
-The goal of textanalysis is to ...
+## Install
 
-## Installation
-
-You can install the development version of textanalysis like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```r
+devtools::install_github("YOUR-USERNAME/textanalysis")
 ```
 
-## Example
+## Try it
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+```r
 library(textanalysis)
-## basic example code
+
+example_negative <- system.file("extdata", "Example_negative.txt",
+                                package = "textanalysis")
+text_mood_analysis(example_negative)
+```
+
+## How the functions work together
+
+1. `preprocess_text()` reads the text file, changes all letters to
+   lowercase and splits the text into separate words.
+2. `compare_words()` compares these words to a list of positive or
+   negative words and counts how many are found. A `*` in a list word
+   allows any ending or beginning, e.g. `"overwhelm*"` matches
+   *overwhelmed* and *overwhelming*.
+3. `text_mood_analysis()` uses the two functions above to count the
+   positive and negative words and calculates their ratio.
+
+## Use your own word lists
+
+```r
+text_mood_analysis(example_negative,
+                   negative = c(negative_words, "gloom*"))
+```
+
+See `?textanalysis` for more details.
 ```
 
